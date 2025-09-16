@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品发布会 - 封面</title>
+    <link rel="stylesheet" href="../theme.css">
+    <style>
+        .cover {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--background-color) 0%, var(--surface-color) 100%);
+            box-sizing: border-box;
+        }
+        .cover h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cover .subtitle {
+            font-size: 1.5em;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        .cover .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 40px;
+            border-radius: 50%;
+        }
+        .cover .presenter {
+            font-size: 1.2em;
+            color: var(--text-secondary);
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="cover">
+            <img src="../assets/images/logo.png" alt="公司Logo" class="logo">
+            <h1>创新科技产品发布会</h1>
+            <div class="subtitle">引领未来，改变世界</div>
+            <p>全新AI智能解决方案</p>
+            <div class="presenter">演讲者：张三</div>
+            <div style="margin-top: 20px; color: var(--text-secondary);">
+                2024年1月15日
+            </div>
+        </div>
+    </div>
+</body>
+</html>

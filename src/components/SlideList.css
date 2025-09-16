@@ -1,0 +1,266 @@
+.slide-list {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide-list-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.slide-list-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.slide-count {
+  background: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.slide-list-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.slides-container {
+  padding: 10px;
+}
+
+.slide-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 80px;
+}
+
+.slide-item:hover {
+  border-color: rgba(102, 126, 234, 0.5);
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slide-item.selected {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.slide-item.drag-over {
+  border-color: #4facfe;
+  background: rgba(79, 172, 254, 0.1);
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3);
+}
+
+.slide-number {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.slide-preview {
+  flex: 1;
+}
+
+.slide-thumbnail {
+  width: 100px;
+  height: 75px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slide-thumbnail iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  transform: scale(0.25);
+  transform-origin: 0 0;
+  width: 400%;
+  height: 400%;
+}
+
+.slide-info {
+  flex: 1;
+  margin: 0 12px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-name {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.slide-actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-icon {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  color: #666;
+  font-size: 12px;
+}
+
+.btn-icon:hover {
+  background: rgba(220, 53, 69, 0.1);
+  border-color: rgba(220, 53, 69, 0.3);
+  color: #dc3545;
+  transform: scale(1.1);
+}
+
+.drag-handle {
+  cursor: move;
+  color: #999;
+  padding: 8px 4px;
+  border-radius: 6px;
+  user-select: none;
+  transition: all 0.2s;
+  font-size: 16px;
+  line-height: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.drag-handle:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #667eea;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px 0;
+  color: #999;
+  font-size: 16px;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .slide-list {
+    width: 100%;
+    height: 40%;
+  }
+
+  .slide-item {
+    padding: 8px;
+  }
+
+  .slide-thumbnail {
+    width: 50px;
+    height: 38px;
+  }
+
+  .slide-name {
+    font-size: 12px;
+  }
+}
+
+/* 新增样式 */
+.slide-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.add-slide-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  font-size: 13px;
+  padding: 6px 12px;
+}
+
+.add-slide-btn:hover {
+  background: linear-gradient(135deg, #3d9bfe 0%, #00d4fe 100%);
+}

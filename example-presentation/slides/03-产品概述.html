@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品发布会 - 产品概述</title>
+    <link rel="stylesheet" href="../theme.css">
+    <style>
+        .product-overview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .product-content h1 {
+            margin-bottom: 30px;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--surface-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .feature-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+        .feature-text h3 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+        }
+        .feature-text p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        .product-image {
+            text-align: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-accent);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .highlight-box h2 {
+            color: var(--text-accent);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="product-overview">
+            <div class="product-content">
+                <h1>产品概述</h1>
+                <p>我们的AI智能解决方案是基于最新深度学习技术开发的创新产品，旨在为企业提供全方位的智能化服务。</p>
+
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <div class="feature-icon">🤖</div>
+                        <div class="feature-text">
+                            <h3>智能分析</h3>
+                            <p>强大的数据分析和模式识别能力</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text">
+                            <h3>实时处理</h3>
+                            <p>毫秒级响应速度，满足实时业务需求</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-text">
+                            <h3>安全可靠</h3>
+                            <p>企业级安全保障，数据加密传输</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-icon">🚀</div>
+                        <div class="feature-text">
+                            <h3>易于集成</h3>
+                            <p>丰富的API接口，快速部署上线</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product-image">
+                <img src="../assets/images/product-showcase.png" alt="产品展示">
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h2>核心价值</h2>
+            <p>提升效率300% · 降低成本60% · 准确率99.9%</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幻灯片标题</title>
+
+    <!-- 主题样式 - 只需要这一个CSS文件 -->
+    <link rel="stylesheet" href="styles/theme.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 标题区域 -->
+        <header>
+            <h1>幻灯片主标题</h1>
+            <p style="color: var(--text-secondary);">副标题或重要描述信息</p>
+        </header>
+
+        <!-- 主要内容区域 -->
+        <main>
+            <!-- 文本内容示例 -->
+            <section>
+                <h2>章节标题</h2>
+                <p>
+                    这是正文内容示例。您可以根据需要调整文字大小、颜色和样式。
+                    支持<strong>加粗</strong>、<em>斜体</em>和
+                    <span style="color: var(--accent-color);">强调色</span>等。
+                </p>
+            </section>
+
+            <!-- 列表内容示例 -->
+            <section>
+                <h2>要点列表</h2>
+                <ul>
+                    <li>第一要点：详细说明内容</li>
+                    <li>第二要点：详细说明内容</li>
+                    <li>第三要点：详细说明内容</li>
+                    <li>第四要点：详细说明内容</li>
+                </ul>
+            </section>
+
+            <!-- 两列布局示例 -->
+            <section>
+                <h2>对比分析</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h3>方案A</h3>
+                        <ul>
+                            <li>优势1</li>
+                            <li>优势2</li>
+                            <li>优势3</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>方案B</h3>
+                        <ul>
+                            <li>优势1</li>
+                            <li>优势2</li>
+                            <li>优势3</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 表格示例 -->
+            <section>
+                <h2>数据对比</h2>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid var(--border-color);">
+                    <thead>
+                        <tr style="background-color: var(--surface-color);">
+                            <th style="padding: 10px; border: 1px solid var(--border-color); text-align: left;">项目</th>
+                            <th style="padding: 10px; border: 1px solid var(--border-color); text-align: left;">方案A</th>
+                            <th style="padding: 10px; border: 1px solid var(--border-color); text-align: left;">方案B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--border-color);">成本</td>
+                            <td style="padding: 10px; border: 1px solid var(--border-color);">低</td>
+                            <td style="padding: 10px; border: 1px solid var(--border-color);">中</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--border-color);">效率</td>
+                            <td style="padding: 10px; border: 1px solid var(--border-color);">高</td>
+                            <td style="padding: 10px; border: 1px solid var(--border-color);">中</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 图片示例 -->
+            <section>
+                <h2>图片展示</h2>
+                <img src="https://via.placeholder.com/600x300/1976d2/ffffff?text=示例图片"
+                     alt="示例图片"
+                     style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="text-align: center; color: var(--text-secondary); margin-top: 10px;">图片说明文字</p>
+            </section>
+
+            <!-- 引用示例 -->
+            <section>
+                <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 20px; margin: 20px 0; font-style: italic; color: var(--text-secondary);">
+                    <p>"成功不是终点，失败不是终结，唯有勇气才是永恒。"</p>
+                    <footer style="text-align: right;">— 温斯顿·丘吉尔</footer>
+                </blockquote>
+            </section>
+
+            <!-- 按钮示例 -->
+            <section>
+                <h2>操作按钮</h2>
+                <div>
+                    <button style="background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-right: 10px;">
+                        主要操作
+                    </button>
+                    <button style="background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); padding: 8px 18px; border-radius: 5px; cursor: pointer;">
+                        次要操作
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-secondary);">
+            <p>演示文稿标题</p>
+        </footer>
+    </div>
+</body>
+</html>

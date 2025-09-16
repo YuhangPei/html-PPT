@@ -1,0 +1,43 @@
+{
+  "title": "创新科技产品发布会",
+  "description": "全新AI智能解决方案产品发布演示",
+  "author": "张三",
+  "company": "创新科技有限公司",
+  "version": "1.0.0",
+  "created": "2024-01-15",
+  "modified": "2024-01-15",
+  "theme": "light",
+  "settings": {
+    "autoPlay": false,
+    "loop": false,
+    "showControls": true,
+    "transition": "fade"
+  },
+  "slides": [
+    {
+      "file": "01-封面.html",
+      "title": "封面",
+      "duration": 5
+    },
+    {
+      "file": "02-目录.html",
+      "title": "目录",
+      "duration": 3
+    },
+    {
+      "file": "03-产品概述.html",
+      "title": "产品概述",
+      "duration": 8
+    },
+    {
+      "file": "04-市场分析.html",
+      "title": "市场分析",
+      "duration": 10
+    },
+    {
+      "file": "05-感谢页.html",
+      "title": "感谢页",
+      "duration": 5
+    }
+  ]
+}

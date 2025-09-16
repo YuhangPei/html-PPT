@@ -1,0 +1,127 @@
+/* PPT主题变量 - 全局色彩控制 */
+
+:root {
+  /* 主要色彩 - 用户可以修改这些变量来改变整体风格 */
+  --primary-color: #1976d2;    /* 主色调 - 用于标题、重点内容 */
+  --secondary-color: #dc004e;  /* 次色调 - 用于强调、按钮 */
+  --accent-color: #00bcd4;     /* 强调色 - 用于图标、装饰 */
+
+  /* 背景色系 */
+  --background-color: #ffffff;   /* 页面背景 */
+  --surface-color: #f5f5f5;      /* 卡片背景 */
+
+  /* 文字色系 */
+  --text-primary: #212121;       /* 主要文字 */
+  --text-secondary: #757575;     /* 次要文字 */
+  --text-accent: #ffffff;        /* 强调文字（通常用于有色背景上的文字） */
+
+  /* 边框和分割线 */
+  --border-color: #e0e0e0;       /* 边框颜色 */
+
+  /* 基础字体 */
+  --font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+
+  /* 基础间距 */
+  --spacing: 16px;
+}
+
+/* 暗色主题变量 */
+[data-theme="dark"] {
+  --primary-color: #90caf9;
+  --secondary-color: #f48fb1;
+  --accent-color: #80deea;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-accent: #000000;
+  --border-color: #333333;
+}
+
+/* 简约主题变量 */
+[data-theme="minimal"] {
+  --primary-color: #000000;
+  --secondary-color: #666666;
+  --accent-color: #999999;
+  --background-color: #ffffff;
+  --surface-color: #fafafa;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+}
+
+/* 商务主题变量 */
+[data-theme="business"] {
+  --primary-color: #1a237e;
+  --secondary-color: #c62828;
+  --accent-color: #ffd600;
+  --background-color: #f5f5f5;
+  --surface-color: #ffffff;
+  --text-primary: #263238;
+  --text-secondary: #546e7a;
+  --border-color: #cfd8dc;
+}
+
+/* 页面基础样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* 容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 简单的标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+/* 基础文字样式 */
+p {
+  margin-bottom: 1em;
+  color: var(--text-primary);
+}
+
+/* 链接样式 */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 列表样式 */
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+/* 图片样式 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 代码样式 */
+code {
+  background-color: var(--surface-color);
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+}

@@ -1,0 +1,248 @@
+/* PPT项目主题样式 - 全局色彩控制 */
+
+:root {
+  /* 主要色彩 */
+  --primary-color: #1976d2;     /* 主色调 - 标题、重点 */
+  --secondary-color: #dc004e;   /* 次色调 - 强调、按钮 */
+  --accent-color: #00bcd4;      /* 强调色 - 装饰、图标 */
+
+  /* 背景色系 */
+  --background-color: #ffffff;   /* 页面背景 */
+  --surface-color: #f5f5f5;      /* 卡片/容器背景 */
+
+  /* 文字色系 */
+  --text-primary: #212121;       /* 主要文字 */
+  --text-secondary: #757575;     /* 次要文字 */
+  --text-accent: #ffffff;        /* 强调文字（有色背景上） */
+
+  /* 边框和分割线 */
+  --border-color: #e0e0e0;       /* 边框颜色 */
+
+  /* 基础字体 */
+  --font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 深色主题 */
+[data-theme="dark"] {
+  --primary-color: #90caf9;
+  --secondary-color: #f48fb1;
+  --accent-color: #80deea;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-accent: #000000;
+  --border-color: #333333;
+}
+
+/* 简约主题 */
+[data-theme="minimal"] {
+  --primary-color: #000000;
+  --secondary-color: #666666;
+  --accent-color: #999999;
+  --background-color: #ffffff;
+  --surface-color: #fafafa;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+}
+
+/* 商务主题 */
+[data-theme="business"] {
+  --primary-color: #1a237e;
+  --secondary-color: #c62828;
+  --accent-color: #ffd600;
+  --background-color: #f5f5f5;
+  --surface-color: #ffffff;
+  --text-primary: #263238;
+  --text-secondary: #546e7a;
+  --border-color: #cfd8dc;
+}
+
+/* 页面基础样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* 幻灯片容器 - 强制16:9比例 */
+.slide-container {
+  width: 1280px;
+  height: 720px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 4:3比例幻灯片容器 */
+.slide-container.aspect-4-3 {
+  width: 1024px;
+  height: 768px;
+}
+
+/* 全屏幻灯片样式 */
+.slide-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.5em; }
+h3 { font-size: 1.5em; margin-bottom: 0.5em; }
+
+/* 基础文字样式 */
+p {
+  margin-bottom: 1em;
+  color: var(--text-primary);
+}
+
+/* 链接样式 */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 列表样式 */
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* 图片样式 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+th {
+  background-color: var(--surface-color);
+  font-weight: bold;
+}
+
+/* 引用样式 */
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* 按钮样式 */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-accent);
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+/* 容器样式 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* 网格布局 */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.2em; }
+}

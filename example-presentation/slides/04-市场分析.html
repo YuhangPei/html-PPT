@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品发布会 - 市场分析</title>
+    <link rel="stylesheet" href="../theme.css">
+    <style>
+        .market-analysis {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        .chart-container {
+            background-color: var(--surface-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background-color: var(--surface-color);
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        .trends {
+            margin-top: 40px;
+        }
+        .trend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--surface-color);
+            border-radius: 8px;
+        }
+        .trend-icon {
+            font-size: 2em;
+            margin-right: 20px;
+        }
+        .trend-content h3 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+        }
+        .trend-content p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        .market-insights {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: var(--text-accent);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        .market-insights h2 {
+            color: var(--text-accent);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1>市场分析</h1>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">500亿</div>
+                <div class="stat-label">市场规模</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">35%</div>
+                <div class="stat-label">年增长率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">潜在客户</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">80%</div>
+                <div class="stat-label">市场需求</div>
+            </div>
+        </div>
+
+        <div class="market-analysis">
+            <div>
+                <div class="chart-container">
+                    <h3>市场规模预测</h3>
+                    <img src="../assets/images/market-chart.png" alt="市场规模图表" style="width: 100%; border-radius: 8px;">
+                </div>
+
+                <div class="trends">
+                    <h2>市场趋势</h2>
+                    <div class="trend-item">
+                        <div class="trend-icon">📈</div>
+                        <div class="trend-content">
+                            <h3>AI技术普及</h3>
+                            <p>人工智能技术在各行业的应用越来越广泛</p>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-icon">🌐</div>
+                        <div class="trend-content">
+                            <h3>数字化转型</h3>
+                            <p>企业加速数字化转型，对智能化解决方案需求激增</p>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-icon">⚡</div>
+                        <div class="trend-content">
+                            <h3>实时数据处理</h3>
+                            <p>对实时数据分析和处理的需求日益增长</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="chart-container">
+                    <h3>竞争分析</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>公司</th>
+                                <th>市场份额</th>
+                                <th>优势</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>我们</td>
+                                <td style="color: var(--primary-color); font-weight: bold;">25%</td>
+                                <td>技术领先</td>
+                            </tr>
+                            <tr>
+                                <td>竞争对手A</td>
+                                <td>30%</td>
+                                <td>品牌优势</td>
+                            </tr>
+                            <tr>
+                                <td>竞争对手B</td>
+                                <td>20%</td>
+                                <td>价格优势</td>
+                            </tr>
+                            <tr>
+                                <td>其他</td>
+                                <td>25%</td>
+                                <td>细分市场</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="market-insights">
+                    <h2>市场洞察</h2>
+                    <p>根据最新市场调研，AI智能解决方案市场正处于快速增长期，预计未来5年内将达到1500亿规模。我们的产品凭借技术优势和创新能力，有望在2年内占据市场领导地位。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
