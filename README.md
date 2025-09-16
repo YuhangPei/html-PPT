@@ -1,4 +1,4 @@
-# PPT 演示系统 (PPT Presentation System)
+# html-PPT
 
 [![React](https://img.shields.io/badge/React-18.2.0-61dafb.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-3178c6.svg)](https://www.typescriptlang.org/)
@@ -56,8 +56,8 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/ppt-presentation-system.git
-cd ppt-presentation-system
+git clone https://github.com/your-username/html-PPT.git
+cd html-PPT
 
 # 安装依赖
 npm install
@@ -186,7 +186,7 @@ npm run build
 ## 📁 项目结构
 
 ```
-ppt-presentation-system/
+html-PPT/
 ├── public/                    # 静态资源
 │   └── index.html             # HTML 模板
 ├── src/                       # 源代码
@@ -376,7 +376,7 @@ server {
 如果您遇到问题或有改进建议，请：
 
 1. 查看 [FAQ](docs/FAQ.md)
-2. 搜索现有的 [Issues](https://github.com/your-username/ppt-presentation-system/issues)
+2. 搜索现有的 [Issues](https://github.com/your-username/html-PPT/issues)
 3. 创建新的 Issue 描述问题
 
 ## 📄 许可证
@@ -394,8 +394,8 @@ server {
 
 ## 📞 联系我们
 
-- **项目主页**：[GitHub Repository](https://github.com/your-username/ppt-presentation-system)
-- **问题反馈**：[GitHub Issues](https://github.com/your-username/ppt-presentation-system/issues)
+- **项目主页**：[GitHub Repository](https://github.com/your-username/html-PPT)
+- **问题反馈**：[GitHub Issues](https://github.com/your-username/html-PPT/issues)
 - **邮件联系**：your-email@example.com
 
 ---

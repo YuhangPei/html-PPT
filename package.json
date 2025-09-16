@@ -1,5 +1,5 @@
 {
-  "name": "ppt-presentation-system",
+  "name": "html-PPT",
   "version": "1.0.0",
   "description": "一个用于PPT演示的Web应用，支持导入导出HTML幻灯片",
   "private": true,
