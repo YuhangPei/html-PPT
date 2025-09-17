@@ -250,3 +250,4 @@ The project is actively developed with planned enhancements:
 - Test with different HTML slide structures
 - Verify ZIP export includes all necessary files
 - Check responsive design on multiple screen sizes
+- 我手动运行了项目,你无需运行项目,如果需要测试编译,执行编译命令即可,运行端口已被占用
