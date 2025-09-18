@@ -121,11 +121,11 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
         // 应用当前绘制设置
         if (drawMode === 'eraser') {
           ctx.globalCompositeOperation = 'destination-out';
-          ctx.lineWidth = 20;
+          ctx.lineWidth = 20; // 固定橡皮擦大小
         } else {
           ctx.globalCompositeOperation = 'source-over';
           ctx.strokeStyle = penColor;
-          ctx.lineWidth = 3;
+          ctx.lineWidth = 3; // 固定笔触大小
         }
 
         // 恢复之前的内容（如果存在）
@@ -140,15 +140,15 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
         // 应用当前绘制设置
         if (drawMode === 'eraser') {
           ctx.globalCompositeOperation = 'destination-out';
-          ctx.lineWidth = 20;
+          ctx.lineWidth = 20; // 固定橡皮擦大小
         } else {
           ctx.globalCompositeOperation = 'source-over';
           ctx.strokeStyle = penColor;
-          ctx.lineWidth = 3;
+          ctx.lineWidth = 3; // 固定笔触大小
         }
       }
     }
-  }, []); // 移除依赖项，只在需要时更新设置
+  }, [drawMode, penColor]);
 
   // 开始绘制
   const startDrawing = useCallback((e: React.MouseEvent) => {
@@ -168,11 +168,11 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
     // 应用当前绘制设置
     if (drawMode === 'eraser') {
       ctx.globalCompositeOperation = 'destination-out';
-      ctx.lineWidth = 20;
+      ctx.lineWidth = 20; // 固定橡皮擦大小
     } else {
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = penColor;
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 3; // 固定笔触大小
     }
     ctx.beginPath();
     ctx.moveTo(x, y);
@@ -220,16 +220,13 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
     }
   }, [currentSlideIndex]);
 
-  // 切换绘制模式
-  const toggleDrawMode = useCallback(() => {
-    setDrawMode(prev => prev === 'pen' ? 'eraser' : 'pen');
-  }, []);
-
+  
   // 选择颜色
   const selectColor = useCallback((color: string) => {
     setPenColor(color);
     setDrawMode('pen');
   }, []);
+
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     switch (e.key) {
@@ -410,6 +407,8 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
                       style={{
                         left: mousePosition.x,
                         top: mousePosition.y,
+                        width: 30,
+                        height: 30,
                       }}
                     />
                     <div
@@ -419,7 +418,7 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
                         top: mousePosition.y,
                       }}
                     >
-                      🧽
+                      <span>🧽</span>
                     </div>
                   </>
                 )}
@@ -431,7 +430,7 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
         {/* 左侧导航 */}
         <div className="side-nav left-nav">
           <button
-            className="nav-btn"
+            className="nav-btn prev-btn"
             onClick={() => {
               saveCurrentSlideDrawing();
               setTimeout(() => {
@@ -441,10 +440,12 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
             disabled={currentSlideIndex === 0}
             title="上一页"
           >
-            ‹
+            <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
           </button>
           <button
-            className="nav-btn"
+            className="nav-btn next-btn"
             onClick={() => {
               saveCurrentSlideDrawing();
               setTimeout(() => {
@@ -454,14 +455,16 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
             disabled={currentSlideIndex === project.slides.length - 1}
             title="下一页"
           >
-            ›
+            <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
           </button>
         </div>
 
         {/* 右侧导航 */}
         <div className="side-nav right-nav">
           <button
-            className="nav-btn"
+            className="nav-btn prev-btn"
             onClick={() => {
               saveCurrentSlideDrawing();
               setTimeout(() => {
@@ -471,10 +474,12 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
             disabled={currentSlideIndex === 0}
             title="上一页"
           >
-            ‹
+            <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
           </button>
           <button
-            className="nav-btn"
+            className="nav-btn next-btn"
             onClick={() => {
               saveCurrentSlideDrawing();
               setTimeout(() => {
@@ -484,10 +489,13 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
             disabled={currentSlideIndex === project.slides.length - 1}
             title="下一页"
           >
-            ›
+            <svg className="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
           </button>
         </div>
 
+  
         {/* 底部工具栏 */}
         <div className="drawing-tools">
           {/* 绘制工具 */}
@@ -560,6 +568,7 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
             </div>
           )}
 
+
           {/* 其他工具 */}
           <div className="tool-group">
             <button
@@ -575,13 +584,6 @@ const PlaybackModal: React.FC<PlaybackModalProps> = ({ project, onClose, aspectR
               title="清除"
             >
               🗑️
-            </button>
-            <button
-              className="tool-btn"
-              onClick={toggleFullscreen}
-              title="全屏"
-            >
-              ⛶
             </button>
             <button
               className="tool-btn close-btn"

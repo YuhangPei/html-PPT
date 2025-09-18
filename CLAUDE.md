@@ -250,4 +250,7 @@ The project is actively developed with planned enhancements:
 - Test with different HTML slide structures
 - Verify ZIP export includes all necessary files
 - Check responsive design on multiple screen sizes
-- 我手动运行了项目,你无需运行项目,如果需要测试编译,执行编译命令即可,运行端口已被占用
+- 每次改完代码后，可以不用编译测试，节省时间
+
+22222
+- 播放界面的翻页器需要在同侧都有,避免演讲者站在同侧无法点击另一侧的翻页
